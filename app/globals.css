@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 20 30% 97%;
+    --foreground: 350 20% 15%;
+    --card: 20 40% 95%;
+    --card-foreground: 350 20% 15%;
+    --popover: 20 30% 97%;
+    --popover-foreground: 350 20% 15%;
+    --primary: 350 60% 52%;
+    --primary-foreground: 20 30% 97%;
+    --secondary: 20 25% 92%;
+    --secondary-foreground: 350 20% 20%;
+    --muted: 20 20% 93%;
+    --muted-foreground: 350 10% 45%;
+    --accent: 15 70% 60%;
+    --accent-foreground: 20 30% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 20% 88%;
+    --input: 20 20% 88%;
+    --ring: 350 60% 52%;
+    --chart-1: 350 60% 52%;
+    --chart-2: 15 70% 60%;
+    --chart-3: 350 20% 15%;
+    --chart-4: 20 25% 92%;
+    --chart-5: 20 40% 95%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
